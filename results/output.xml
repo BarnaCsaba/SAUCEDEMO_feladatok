@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.13.5 on win32)" generated="2026-02-20T08:42:51.466061" rpa="false" schemaversion="5">
+<suite id="s1" name="SAUCEDEMO feladatok" source="C:\Users\BarnaCsaba\Desktop\2260220\SAUCEDEMO_feladatok">
+<suite id="s1-s1" name="Cart" source="C:\Users\BarnaCsaba\Desktop\2260220\SAUCEDEMO_feladatok\cart.robot">
+<test id="s1-s1-t1" name="Add multiple products" line="9">
+<kw name="Open Browser" owner="Selenium2Library">
+<msg time="2026-02-20T08:42:51.625968" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>https://www.saucedemo.com/</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-20T08:42:51.625615" elapsed="0.845800"/>
+</kw>
+<kw name="Input Text" owner="Selenium2Library">
+<msg time="2026-02-20T08:42:52.472553" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>id=user-name</arg>
+<arg>standard_user</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T08:42:52.472122" elapsed="0.085790"/>
+</kw>
+<kw name="Input Password" owner="Selenium2Library">
+<msg time="2026-02-20T08:42:52.558488" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg time="2026-02-20T08:42:52.576619" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>id=password</arg>
+<arg>secret_sauce</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T08:42:52.558216" elapsed="0.047172"/>
+</kw>
+<kw name="Click Button" owner="Selenium2Library">
+<msg time="2026-02-20T08:42:52.605984" level="INFO">Clicking button '//*[@id="login-button"]'.</msg>
+<arg>//*[@id="login-button"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T08:42:52.605713" elapsed="0.061818"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-20T08:42:55.668773" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-20T08:42:52.668020" elapsed="3.001025"/>
+</kw>
+<kw name="Close Browser" owner="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-20T08:42:55.669394" elapsed="2.062177"/>
+</kw>
+<status status="PASS" start="2026-02-20T08:42:51.623139" elapsed="6.109147"/>
+</test>
+<status status="PASS" start="2026-02-20T08:42:51.498778" elapsed="6.241804"/>
+</suite>
+<status status="PASS" start="2026-02-20T08:42:51.469688" elapsed="6.274064"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="SAUCEDEMO feladatok" id="s1" pass="1" fail="0" skip="0">SAUCEDEMO feladatok</stat>
+<stat name="Cart" id="s1-s1" pass="1" fail="0" skip="0">SAUCEDEMO feladatok.Cart</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
