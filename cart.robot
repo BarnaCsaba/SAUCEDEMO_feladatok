@@ -14,7 +14,7 @@ Add multiple products
 
     ${item_count}=    Get Element Count    //*[@class="cart_item"]
     Should Be Equal As Numbers    ${item_count}    2
-#    Remove items from cart
+    Remove items from cart
     
     Sleep    3s
     Close Browser
