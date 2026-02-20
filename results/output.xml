@@ -1,61 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.13.5 on win32)" generated="2026-02-20T08:42:51.466061" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.1 (Python 3.13.5 on win32)" generated="2026-02-20T09:35:00.855324" rpa="false" schemaversion="5">
 <suite id="s1" name="SAUCEDEMO feladatok" source="C:\Users\BarnaCsaba\Desktop\2260220\SAUCEDEMO_feladatok">
 <suite id="s1-s1" name="Cart" source="C:\Users\BarnaCsaba\Desktop\2260220\SAUCEDEMO_feladatok\cart.robot">
 <test id="s1-s1-t1" name="Add multiple products" line="9">
+<kw name="Login to SauceDemo">
 <kw name="Open Browser" owner="Selenium2Library">
-<msg time="2026-02-20T08:42:51.625968" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<msg time="2026-02-20T09:35:01.012073" level="INFO">Opening browser 'Firefox' to base url 'https://www.saucedemo.com/'.</msg>
 <arg>https://www.saucedemo.com/</arg>
-<arg>Chrome</arg>
+<arg>Firefox</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-02-20T08:42:51.625615" elapsed="0.845800"/>
+<status status="PASS" start="2026-02-20T09:35:01.011715" elapsed="5.054019"/>
 </kw>
 <kw name="Input Text" owner="Selenium2Library">
-<msg time="2026-02-20T08:42:52.472553" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<msg time="2026-02-20T09:35:06.066812" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
 <arg>id=user-name</arg>
 <arg>standard_user</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-20T08:42:52.472122" elapsed="0.085790"/>
+<status status="PASS" start="2026-02-20T09:35:06.065948" elapsed="0.045374"/>
 </kw>
 <kw name="Input Password" owner="Selenium2Library">
-<msg time="2026-02-20T08:42:52.558488" level="INFO">Typing password into text field 'id=password'.</msg>
-<msg time="2026-02-20T08:42:52.576619" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2026-02-20T09:35:06.111773" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg time="2026-02-20T09:35:06.115616" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>id=password</arg>
 <arg>secret_sauce</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-20T08:42:52.558216" elapsed="0.047172"/>
+<status status="PASS" start="2026-02-20T09:35:06.111509" elapsed="0.014514"/>
 </kw>
 <kw name="Click Button" owner="Selenium2Library">
-<msg time="2026-02-20T08:42:52.605984" level="INFO">Clicking button '//*[@id="login-button"]'.</msg>
+<msg time="2026-02-20T09:35:06.126604" level="INFO">Clicking button '//*[@id="login-button"]'.</msg>
 <arg>//*[@id="login-button"]</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-20T08:42:52.605713" elapsed="0.061818"/>
+<status status="PASS" start="2026-02-20T09:35:06.126267" elapsed="0.083373"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-02-20T08:42:55.668773" level="INFO">Slept 3 seconds.</msg>
+<msg time="2026-02-20T09:35:09.211454" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-02-20T08:42:52.668020" elapsed="3.001025"/>
+<status status="PASS" start="2026-02-20T09:35:06.209940" elapsed="3.002718"/>
+</kw>
+<status status="PASS" start="2026-02-20T09:35:01.010895" elapsed="8.202641"/>
+</kw>
+<kw name="Add items to cart">
+<kw name="Click Button" owner="Selenium2Library">
+<msg time="2026-02-20T09:35:09.217358" level="INFO">Clicking button '//*[@id="add-to-cart-sauce-labs-backpack"]'.</msg>
+<arg>//*[@id="add-to-cart-sauce-labs-backpack"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T09:35:09.215908" elapsed="0.083622"/>
+</kw>
+<kw name="Click Button" owner="Selenium2Library">
+<msg time="2026-02-20T09:35:09.300642" level="INFO">Clicking button '//*[@id="add-to-cart-sauce-labs-bike-light"]'.</msg>
+<arg>//*[@id="add-to-cart-sauce-labs-bike-light"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T09:35:09.300001" elapsed="0.068992"/>
+</kw>
+<status status="PASS" start="2026-02-20T09:35:09.214521" elapsed="0.154830"/>
+</kw>
+<kw name="Element Should Contain" owner="Selenium2Library">
+<msg time="2026-02-20T09:35:09.383761" level="INFO">Element '//*[@id="shopping_cart_container"]/a/span' contains text '2'.</msg>
+<arg>//*[@id="shopping_cart_container"]/a/span</arg>
+<arg>2</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2026-02-20T09:35:09.369994" elapsed="0.013939"/>
+</kw>
+<kw name="Click Element" owner="Selenium2Library">
+<msg time="2026-02-20T09:35:09.384451" level="INFO">Clicking element '//*[@id="shopping_cart_container"]/a'.</msg>
+<arg>//*[@id="shopping_cart_container"]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-20T09:35:09.384215" elapsed="0.063114"/>
+</kw>
+<kw name="Get Element Count" owner="Selenium2Library">
+<msg time="2026-02-20T09:35:09.452022" level="INFO">${item_count} = 2</msg>
+<var>${item_count}</var>
+<arg>//*[@class="cart_item"]</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2026-02-20T09:35:09.448813" elapsed="0.003404"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2026-02-20T09:35:09.452937" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<msg time="2026-02-20T09:35:09.453199" level="FAIL">2.0 != 3.0</msg>
+<arg>${item_count}</arg>
+<arg>3</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="FAIL" start="2026-02-20T09:35:09.452540" elapsed="0.003957">2.0 != 3.0</status>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-02-20T09:35:09.456747" elapsed="0.000114"/>
 </kw>
 <kw name="Close Browser" owner="Selenium2Library">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-02-20T08:42:55.669394" elapsed="2.062177"/>
+<status status="NOT RUN" start="2026-02-20T09:35:09.457035" elapsed="0.000109"/>
 </kw>
-<status status="PASS" start="2026-02-20T08:42:51.623139" elapsed="6.109147"/>
+<status status="FAIL" start="2026-02-20T09:35:01.008319" elapsed="8.449037">2.0 != 3.0</status>
 </test>
-<status status="PASS" start="2026-02-20T08:42:51.498778" elapsed="6.241804"/>
+<status status="FAIL" start="2026-02-20T09:35:00.887562" elapsed="8.581451"/>
 </suite>
-<status status="PASS" start="2026-02-20T08:42:51.469688" elapsed="6.274064"/>
+<status status="FAIL" start="2026-02-20T09:35:00.858674" elapsed="8.612362"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="SAUCEDEMO feladatok" id="s1" pass="1" fail="0" skip="0">SAUCEDEMO feladatok</stat>
-<stat name="Cart" id="s1-s1" pass="1" fail="0" skip="0">SAUCEDEMO feladatok.Cart</stat>
+<stat name="SAUCEDEMO feladatok" id="s1" pass="0" fail="1" skip="0">SAUCEDEMO feladatok</stat>
+<stat name="Cart" id="s1-s1" pass="0" fail="1" skip="0">SAUCEDEMO feladatok.Cart</stat>
 </suite>
 </statistics>
 <errors>
