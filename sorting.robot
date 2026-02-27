@@ -10,6 +10,7 @@ Sort products Z to A
     Click Element    //*[@id="header_container"]/div[2]/div/span/select/option[4]
     ${product_names}=    Get All Products Names
     Verify Z to A Sorting    ${product_names}
+    Verify A to Z Sorting    ${product_names}
 
 *** Keywords ***
 Get All Products Names
@@ -28,5 +29,16 @@ Verify Z to A Sorting
         ${current}=    Get From List    ${product_names}    ${index}
         ${next}=    Get From List    ${product_names}    ${index + 1}
         Should Be True    '${current}' >= '${next}'    Sorting is not Z to A at index ${index}
+
+    END
+
+
+Verify A to Z Sorting
+    [Arguments]    @{product_names}
+    ${length}=    Get Length    ${product_names}
+    FOR    ${index}    IN RANGE   0    ${length}-1
+        ${current}=    Get From List    ${product_names}    ${index}
+        ${next}=    Get From List    ${product_names}    ${index + 1}
+        Should Be True    '${current}' <= '${next}'    Sorting is not A to Z at index ${index}
 
     END
