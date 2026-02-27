@@ -8,9 +8,8 @@ Sort products Z to A
     Login with standard user
     Click Element    class:product_sort_container
     Click Element    //*[@id="header_container"]/div[2]/div/span/select/option[4]
-    Get All Products Names
+    ${product_names}=    Get All Products Names
     Verify Z to A Sorting    ${product_names}
-    
 
 *** Keywords ***
 Get All Products Names
@@ -22,7 +21,7 @@ Get All Products Names
     END
     RETURN     @{products}
 
-    Verify Z to A Sorting
+Verify Z to A Sorting
     [Arguments]    @{product_names}
     ${length}=    Get Length    ${product_names}
     FOR    ${index}    IN RANGE   0    ${length}-1

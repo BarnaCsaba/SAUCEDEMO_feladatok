@@ -1,125 +1,234 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.13.5 on win32)" generated="2026-02-20T09:46:45.113734" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.1 (Python 3.13.5 on win32)" generated="2026-02-27T09:25:54.540326" rpa="false" schemaversion="5">
 <suite id="s1" name="SAUCEDEMO feladatok" source="C:\Users\BarnaCsaba\Desktop\2260220\SAUCEDEMO_feladatok">
-<suite id="s1-s1" name="Cart" source="C:\Users\BarnaCsaba\Desktop\2260220\SAUCEDEMO_feladatok\cart.robot">
-<test id="s1-s1-t1" name="Add multiple products" line="9">
-<kw name="Login to SauceDemo">
-<kw name="Open Browser" owner="Selenium2Library">
-<msg time="2026-02-20T09:46:45.275547" level="INFO">Opening browser 'Firefox' to base url 'https://www.saucedemo.com/'.</msg>
+<suite id="s1-s1" name="Sorting" source="C:\Users\BarnaCsaba\Desktop\2260220\SAUCEDEMO_feladatok\sorting.robot">
+<test id="s1-s1-t1" name="Sort products Z to A" line="7">
+<kw name="Login with standard user" owner="loginkeywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-27T09:25:54.701578" level="INFO">Opening browser 'Firefox' to base url 'https://www.saucedemo.com/'.</msg>
+<msg time="2026-02-27T09:25:54.960084" level="WARN">Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event)</msg>
 <arg>https://www.saucedemo.com/</arg>
 <arg>Firefox</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-02-20T09:46:45.275272" elapsed="4.992951"/>
+<status status="PASS" start="2026-02-27T09:25:54.701357" elapsed="5.755913"/>
 </kw>
-<kw name="Input Text" owner="Selenium2Library">
-<msg time="2026-02-20T09:46:50.269302" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
-<arg>id=user-name</arg>
-<arg>standard_user</arg>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-27T09:26:00.457866" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>locator=id=user-name</arg>
+<arg>text=standard_user</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-20T09:46:50.268435" elapsed="0.039107"/>
+<status status="PASS" start="2026-02-27T09:26:00.457478" elapsed="0.049784"/>
 </kw>
-<kw name="Input Password" owner="Selenium2Library">
-<msg time="2026-02-20T09:46:50.308044" level="INFO">Typing password into text field 'id=password'.</msg>
-<msg time="2026-02-20T09:46:50.312778" level="INFO">Temporally setting log level to: NONE</msg>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2026-02-27T09:26:00.507822" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg time="2026-02-27T09:26:00.511780" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>id=password</arg>
 <arg>secret_sauce</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-20T09:46:50.307725" elapsed="0.016348"/>
+<status status="PASS" start="2026-02-27T09:26:00.507461" elapsed="0.017885"/>
 </kw>
-<kw name="Click Button" owner="Selenium2Library">
-<msg time="2026-02-20T09:46:50.324536" level="INFO">Clicking button '//*[@id="login-button"]'.</msg>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-02-27T09:26:00.525751" level="INFO">Clicking button '//*[@id="login-button"]'.</msg>
 <arg>//*[@id="login-button"]</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-20T09:46:50.324230" elapsed="0.086449"/>
+<status status="PASS" start="2026-02-27T09:26:00.525517" elapsed="0.087968"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-02-20T09:46:53.411793" level="INFO">Slept 3 seconds.</msg>
+<msg time="2026-02-27T09:26:03.614910" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-02-20T09:46:50.410845" elapsed="3.001670"/>
+<status status="PASS" start="2026-02-27T09:26:00.613669" elapsed="3.002598"/>
 </kw>
-<status status="PASS" start="2026-02-20T09:46:45.274607" elapsed="8.138354"/>
+<status status="PASS" start="2026-02-27T09:25:54.700713" elapsed="8.916596"/>
 </kw>
-<kw name="Add items to cart">
-<kw name="Click Button" owner="Selenium2Library">
-<msg time="2026-02-20T09:46:53.415819" level="INFO">Clicking button '//*[@id="add-to-cart-sauce-labs-backpack"]'.</msg>
-<arg>//*[@id="add-to-cart-sauce-labs-backpack"]</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-20T09:46:53.415097" elapsed="0.078113"/>
-</kw>
-<kw name="Click Button" owner="Selenium2Library">
-<msg time="2026-02-20T09:46:53.493797" level="INFO">Clicking button '//*[@id="add-to-cart-sauce-labs-bike-light"]'.</msg>
-<arg>//*[@id="add-to-cart-sauce-labs-bike-light"]</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-20T09:46:53.493450" elapsed="0.063093"/>
-</kw>
-<status status="PASS" start="2026-02-20T09:46:53.414081" elapsed="0.142745"/>
-</kw>
-<kw name="Element Should Contain" owner="Selenium2Library">
-<msg time="2026-02-20T09:46:53.568190" level="INFO">Element '//*[@id="shopping_cart_container"]/a/span' contains text '2'.</msg>
-<arg>//*[@id="shopping_cart_container"]/a/span</arg>
-<arg>2</arg>
-<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<status status="PASS" start="2026-02-20T09:46:53.557269" elapsed="0.011115"/>
-</kw>
-<kw name="Click Element" owner="Selenium2Library">
-<msg time="2026-02-20T09:46:53.568998" level="INFO">Clicking element '//*[@id="shopping_cart_container"]/a'.</msg>
-<arg>//*[@id="shopping_cart_container"]/a</arg>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-27T09:26:03.620706" level="INFO">Clicking element 'class:product_sort_container'.</msg>
+<arg>class:product_sort_container</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-20T09:46:53.568713" elapsed="0.073616"/>
+<status status="PASS" start="2026-02-27T09:26:03.619252" elapsed="0.096111"/>
 </kw>
-<kw name="Get Element Count" owner="Selenium2Library">
-<msg time="2026-02-20T09:46:53.651208" level="INFO">${item_count} = 2</msg>
-<var>${item_count}</var>
-<arg>//*[@class="cart_item"]</arg>
-<doc>Returns the number of elements matching ``locator``.</doc>
-<status status="PASS" start="2026-02-20T09:46:53.643769" elapsed="0.007667"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-27T09:26:03.716961" level="INFO">Clicking element '//*[@id="header_container"]/div[2]/div/span/select/option[4]'.</msg>
+<arg>//*[@id="header_container"]/div[2]/div/span/select/option[4]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-27T09:26:03.716179" elapsed="0.066737"/>
 </kw>
-<kw name="Should Be Equal As Numbers" owner="BuiltIn">
-<msg time="2026-02-20T09:46:53.652378" level="INFO">Argument types are:
-&lt;class 'int'&gt;
-&lt;class 'str'&gt;</msg>
-<arg>${item_count}</arg>
-<arg>2</arg>
-<doc>Fails if objects are unequal after converting them to real numbers.</doc>
-<status status="PASS" start="2026-02-20T09:46:53.651873" elapsed="0.000746"/>
+<kw name="Get All Products Names">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2026-02-27T09:26:03.784271" level="INFO">${products} = []</msg>
+<var>${products}</var>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2026-02-27T09:26:03.783978" elapsed="0.000415"/>
 </kw>
-<kw name="Remove items from cart">
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-02-20T09:46:56.653905" level="INFO">Slept 3 seconds.</msg>
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-02-20T09:46:53.653186" elapsed="3.001754"/>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2026-02-27T09:26:03.786855" level="INFO">${product_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="1002529e-bcc5-4100-a3ab-5ea0f40ebd1f", element="32cc4dfb-41af-4dfb-80d5-533c5ed8bb47")&gt;, &lt;selenium.webdriver.remote.webelement.WebElement (s...</msg>
+<var>${product_elements}</var>
+<arg>class:inventory_item_name</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2026-02-27T09:26:03.784520" elapsed="0.002463"/>
 </kw>
-<kw name="Click Button" owner="Selenium2Library">
-<msg time="2026-02-20T09:46:56.656854" level="INFO">Clicking button '//*[@id="remove-sauce-labs-backpack"]'.</msg>
-<arg>//*[@id="remove-sauce-labs-backpack"]</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-20T09:46:56.655867" elapsed="0.080576"/>
+<for flavor="IN">
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-02-27T09:26:03.792505" level="INFO">${product_name} = Sauce Labs Fleece Jacket</msg>
+<var>${product_name}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-27T09:26:03.787573" elapsed="0.005045"/>
 </kw>
-<kw name="Click Button" owner="Selenium2Library">
-<msg time="2026-02-20T09:46:56.738016" level="INFO">Clicking button '//*[@id="remove-sauce-labs-bike-light"]'.</msg>
-<arg>//*[@id="remove-sauce-labs-bike-light"]</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-20T09:46:56.737096" elapsed="0.078877"/>
+<kw name="Append To List" owner="Collections">
+<arg>${products}</arg>
+<arg>${product_name}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-27T09:26:03.792747" elapsed="0.000299"/>
 </kw>
-<status status="PASS" start="2026-02-20T09:46:53.652890" elapsed="3.163539"/>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="1002529e-bcc5-4100-a3ab-5ea0f40ebd1f", element="32cc4dfb-41af-4dfb-80d5-533c5ed8bb47")&gt;</var>
+<status status="PASS" start="2026-02-27T09:26:03.787412" elapsed="0.005700"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-02-27T09:26:03.797678" level="INFO">${product_name} = Sauce Labs Backpack</msg>
+<var>${product_name}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-27T09:26:03.793346" elapsed="0.004475"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-02-20T09:46:59.818888" level="INFO">Slept 3 seconds.</msg>
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-02-20T09:46:56.817410" elapsed="3.003150"/>
+<kw name="Append To List" owner="Collections">
+<arg>${products}</arg>
+<arg>${product_name}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-27T09:26:03.797980" elapsed="0.000354"/>
 </kw>
-<kw name="Close Browser" owner="Selenium2Library">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-02-20T09:46:59.822774" elapsed="2.664426"/>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="1002529e-bcc5-4100-a3ab-5ea0f40ebd1f", element="5450f5fa-d5cc-47fb-bc5c-438c87b0b908")&gt;</var>
+<status status="PASS" start="2026-02-27T09:26:03.793216" elapsed="0.005211"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-02-27T09:26:03.802816" level="INFO">${product_name} = Sauce Labs Bolt T-Shirt</msg>
+<var>${product_name}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-27T09:26:03.798684" elapsed="0.004255"/>
 </kw>
-<status status="PASS" start="2026-02-20T09:46:45.272327" elapsed="17.215515"/>
+<kw name="Append To List" owner="Collections">
+<arg>${products}</arg>
+<arg>${product_name}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-27T09:26:03.803083" elapsed="0.000307"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="1002529e-bcc5-4100-a3ab-5ea0f40ebd1f", element="e7b007d3-3198-4051-952f-bf703a57faa3")&gt;</var>
+<status status="PASS" start="2026-02-27T09:26:03.798534" elapsed="0.004919"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-02-27T09:26:03.807508" level="INFO">${product_name} = Test.allTheThings() T-Shirt (Red)</msg>
+<var>${product_name}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-27T09:26:03.803713" elapsed="0.003902"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${products}</arg>
+<arg>${product_name}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-27T09:26:03.807742" elapsed="0.000264"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="1002529e-bcc5-4100-a3ab-5ea0f40ebd1f", element="1132e518-e1f2-446a-9a0a-25cd4db0b68d")&gt;</var>
+<status status="PASS" start="2026-02-27T09:26:03.803547" elapsed="0.004522"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-02-27T09:26:03.812073" level="INFO">${product_name} = Sauce Labs Bike Light</msg>
+<var>${product_name}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-27T09:26:03.808281" elapsed="0.003901"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${products}</arg>
+<arg>${product_name}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-27T09:26:03.812308" elapsed="0.000370"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="1002529e-bcc5-4100-a3ab-5ea0f40ebd1f", element="b2277e9b-57d3-43eb-b6cd-6f37cf6ce573")&gt;</var>
+<status status="PASS" start="2026-02-27T09:26:03.808164" elapsed="0.004588"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-02-27T09:26:03.818994" level="INFO">${product_name} = Sauce Labs Onesie</msg>
+<var>${product_name}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-27T09:26:03.813050" elapsed="0.006083"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${products}</arg>
+<arg>${product_name}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2026-02-27T09:26:03.819295" elapsed="0.000340"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="1002529e-bcc5-4100-a3ab-5ea0f40ebd1f", element="085ce576-5599-4197-a76e-451ea0089c1e")&gt;</var>
+<status status="PASS" start="2026-02-27T09:26:03.812854" elapsed="0.006852"/>
+</iter>
+<var>${element}</var>
+<value>@{product_elements}</value>
+<status status="PASS" start="2026-02-27T09:26:03.787102" elapsed="0.032655"/>
+</for>
+<return>
+<value>@{products}</value>
+<status status="PASS" start="2026-02-27T09:26:03.819827" elapsed="0.000107"/>
+</return>
+<msg time="2026-02-27T09:26:03.820060" level="INFO">${product_names} = ['Sauce Labs Fleece Jacket', 'Sauce Labs Backpack', 'Sauce Labs Bolt T-Shirt', 'Test.allTheThings() T-Shirt (Red)', 'Sauce Labs Bike Light', 'Sauce Labs Onesie']</msg>
+<var>${product_names}</var>
+<status status="PASS" start="2026-02-27T09:26:03.783636" elapsed="0.036515"/>
+</kw>
+<kw name="Verify Z to A Sorting">
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2026-02-27T09:26:03.820996" level="INFO">Length is 1.</msg>
+<msg time="2026-02-27T09:26:03.821157" level="INFO">${length} = 1</msg>
+<var>${length}</var>
+<arg>${product_names}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2026-02-27T09:26:03.820670" elapsed="0.000555"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Get From List" owner="Collections">
+<var>${current}</var>
+<arg>${product_names}</arg>
+<arg>${index}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="NOT RUN" start="2026-02-27T09:26:03.821636" elapsed="0.000138"/>
+</kw>
+<kw name="Get From List" owner="Collections">
+<var>${next}</var>
+<arg>${product_names}</arg>
+<arg>${index + 1}</arg>
+<doc>Returns the value specified with an ``index`` from ``list``.</doc>
+<status status="NOT RUN" start="2026-02-27T09:26:03.821873" elapsed="0.000076"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>'${current}' &gt;= '${next}'</arg>
+<arg>Sorting is not Z to A at index ${index}</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="NOT RUN" start="2026-02-27T09:26:03.822036" elapsed="0.000067"/>
+</kw>
+<var name="${index}"/>
+<status status="NOT RUN" start="2026-02-27T09:26:03.821518" elapsed="0.000636"/>
+</iter>
+<var>${index}</var>
+<value>0</value>
+<value>${length}-1</value>
+<status status="NOT RUN" start="2026-02-27T09:26:03.821314" elapsed="0.000880"/>
+</for>
+<arg>${product_names}</arg>
+<status status="PASS" start="2026-02-27T09:26:03.820414" elapsed="0.001847"/>
+</kw>
+<status status="PASS" start="2026-02-27T09:25:54.698510" elapsed="9.123911"/>
 </test>
-<status status="PASS" start="2026-02-20T09:46:45.149421" elapsed="17.341635"/>
+<status status="PASS" start="2026-02-27T09:25:54.570754" elapsed="9.254267"/>
 </suite>
-<status status="PASS" start="2026-02-20T09:46:45.117983" elapsed="17.376042"/>
+<status status="PASS" start="2026-02-27T09:25:54.544676" elapsed="9.282205"/>
 </suite>
 <statistics>
 <total>
@@ -129,9 +238,10 @@
 </tag>
 <suite>
 <stat name="SAUCEDEMO feladatok" id="s1" pass="1" fail="0" skip="0">SAUCEDEMO feladatok</stat>
-<stat name="Cart" id="s1-s1" pass="1" fail="0" skip="0">SAUCEDEMO feladatok.Cart</stat>
+<stat name="Sorting" id="s1-s1" pass="1" fail="0" skip="0">SAUCEDEMO feladatok.Sorting</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2026-02-27T09:25:54.960084" level="WARN">Error sending stats to Plausible: error sending request for url (https://plausible.io/api/event)</msg>
 </errors>
 </robot>
