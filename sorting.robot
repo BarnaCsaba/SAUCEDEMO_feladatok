@@ -21,3 +21,13 @@ Get All Products Names
         Append To List    ${products}    ${product_name}
     END
     RETURN     @{products}
+
+    Verify Z to A Sorting
+    [Arguments]    @{product_names}
+    ${length}=    Get Length    ${product_names}
+    FOR    ${index}    IN RANGE   0    ${length}-1
+        ${current}=    Get From List    ${product_names}    ${index}
+        ${next}=    Get From List    ${product_names}    ${index + 1}
+        Should Be True    '${current}' >= '${next}'    Sorting is not Z to A at index ${index}
+
+    END
